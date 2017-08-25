@@ -1,0 +1,63 @@
+.feedback-content {
+    height: 100%;
+}
+
+.review {
+    display: flex;
+    flex-flow: row wrap;
+    height: 100%;
+    &__section {
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        position: relative;
+        filter: grayscale(100%);
+    }
+    &__content {
+        background-color: rgba(0, 0, 0, .6);
+        width: 100%;
+        height: 100%;
+        padding: 10% 7%;
+        overflow: auto;
+        transform: scale(0.9);
+        opacity: 0;
+        transition: all 0.3s;
+        // position: absolute;
+        // top: 50%;
+        // left: 50%;
+        // transform: translate(-50%, -50%);
+    }
+    &__name {
+        font: 14px / 28px 'Gagalin';
+        margin-bottom: 20px;
+    }
+    &__text {
+        margin-bottom: 16px;
+    }
+    &__item:hover .review__content {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.button_review {
+    background-color: #2f3234; 
+}
+
+.review__item {
+    flex: 1 1 25%;
+    height: 50%;
+}
+
+.Rectangle_3 {
+  background-color: rgb(181, 186, 189);
+  position: absolute;
+  left: 275px;
+  top: 3250px;
+  width: 275px;
+  height: 325px;
+  z-index: 65;
+}
+

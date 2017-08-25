@@ -1,0 +1,137 @@
+#order {
+    background-image: url('../../img/bg/order_bg.jpg');
+}
+
+.heading_order {
+    line-height: 64px;
+    color: $yellow;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.order-form {
+    display: flex;
+    &__left, &__right {
+        flex: 1 1 50%;
+        display: flex;
+        flex-flow: row wrap;
+        // justify-content: space-between;
+        align-content: space-between;        
+    }
+    &__left {
+        height: 210px;
+    }
+    &__right {
+        height: 260px;
+    }
+}
+
+.order-form__label {
+    flex: 1 1 50%;
+    padding-right: 20px;
+    // margin-bottom: 16px;
+    &_width {
+        flex: 1 1 100%;
+    }
+    &_narrow {
+        flex: 1 1 25%;
+    }
+    &_radio {
+        flex-basis: auto;
+        padding-right: 0;
+        display: flex;
+        align-items: center;
+        // justify-content: flex-start;
+    }
+    &_checkbox {
+        flex: 1 1 100%;
+        // flex: none;
+        padding: 0;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.order-form__input {
+    border: 1px solid rgb(209, 207, 203);
+    border-radius: 5px;
+    width: 100%;
+    height: 35px;
+    padding: 5px 10px;
+    font: 14px 'UbuntuRegular';
+    &_textarea {
+        resize: none;
+        height: 111px;
+    }
+    &:focus {
+        outline: none;
+        border: 1px solid rgb(249, 180, 59);
+    }
+}
+
+    // Стилизация radio и checkbox
+// .order-form__radio {
+//     display: flex;
+//     align-items: center;
+// }
+
+.order-form__radio-disabled {
+    display: none;
+    &:checked + .order-form__radio-custom::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        right: 4px;
+        bottom: 4px;
+        border-radius: 50%;
+        background-color: #e35028;
+    }
+}
+
+.order-form__radio-custom {
+    border-radius: 50%;
+    flex: none;    
+
+}
+
+.order-form__radio-custom, .order-form__checkbox-custom {
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    margin-right: 10px;
+    position: relative;    
+}
+
+.order-form__checkbox-disabled {
+    display: none;
+    &:checked + .order-form__checkbox-custom .iconCheck {
+        display: block;
+    }
+}
+
+.iconCheck {
+    display: none;
+    width: 11px;
+    height: 9px;
+    position: absolute;
+    top: 3px;
+    left: 2px;
+    fill: #e45028;
+}
+
+.button_order-reset, .button_order-submit {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.button_order-reset {
+    margin-left: 4px;
+    background-color: transparent;
+    text-transform: none;
+    &:hover {
+        background-color: rgb(228, 80, 40);
+    }
+}

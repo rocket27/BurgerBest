@@ -1,0 +1,69 @@
+#menu {
+	background-image: url('../../img/bg/menu_bg.jpg');
+}
+
+.menu-content {
+	height: 100%;
+	position: relative;
+}
+
+.heading_menu {
+	line-height: 64px;
+	position: absolute;
+	top: 15%;
+	left: 10%;
+}
+
+.menu-list {
+	display: flex;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	&__item {
+		height: 100%;
+		display: flex;
+		&_active {
+			.menu-list__name {
+				color: $yellow;
+			}
+			.menu-list__content {
+				width: 540px;
+			}
+		}		
+	}
+	&__trigger {
+		display: block;
+		width: 80px;
+		height: 100%;
+		text-decoration: none;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+		position: relative;
+	}
+	&__name {
+		width: 650px;
+		font: 40px / 64px 'Gagalin';
+		color: #fff;
+		text-align: center;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%) rotate(-90deg);
+		white-space: nowrap;
+		transition: color .5s;
+	}
+	&__content {
+		background-color: rgba(46, 49, 51, 0.93);
+		width: 0;
+		height: 100%;
+		color: #fff;
+		overflow: hidden;
+		transition: width .5s;
+	}
+	&__text {
+		width: 540px;
+		padding: 52px 34px;		
+	}
+}

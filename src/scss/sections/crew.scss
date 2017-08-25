@@ -1,0 +1,98 @@
+#crew {
+    background-image: url('../../img/bg/crew_bg.jpg');
+    position: relative;
+}
+
+.half {
+    background-color: rgba(49, 52, 54, .92);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 50%;
+}
+
+.container_half {
+    width: 100%;
+	margin: 0;
+}
+
+.crew-content {
+    padding: 15% 5% 5% 15%;
+}
+
+.heading_crew {
+    line-height: 64px;
+    color: $yellow;
+    margin-bottom: 80px;
+}
+
+.crew-list {
+    padding-left: 20px;
+    &__item {
+        margin-bottom: 30px;
+        position: relative;
+        &_active .crew-list__trigger {
+            color: $yellow;
+        }
+        &_active .crew-list__name::before {
+            transform: rotate(-180deg);
+            top: 2px;
+        }
+    }
+    &__trigger {
+        color: #fff;
+        text-decoration: none;
+    }
+    &__name {
+        font-family: 'Gagalin';
+        transition: color .5s;
+        &::before {
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+            border-top: 7px solid $yellow;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-bottom: 7px solid transparent;
+            transform: rotate(0deg);
+            transition: transform .5s;
+            position: absolute;
+            top: 8px;
+            left: -20px;
+        }
+    }
+    &__hidden {
+        height: 0;
+        overflow: hidden;
+        transition: .5s;
+    }
+    &__about {
+        display: flex;
+        align-items: center;
+        margin-top: 16px;
+    }
+    &__picture {
+        flex: 1 1 30%;
+        // width: 150px;
+        // height: 150px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 20px;
+    }
+    &__image {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    &__description {
+        flex: 1 1 70%;
+        display: flex;
+        flex-flow: column nowrap;
+        // justify-content: space-around;
+    }
+    &__position {
+        font-family: 'UbuntuBold'
+    }
+}

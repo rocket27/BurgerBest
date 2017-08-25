@@ -1,0 +1,159 @@
+#production {
+    background: rgba(249,179,59,1);
+    background: -moz-linear-gradient(top, rgba(249,179,59,1) 0%, rgba(235,140,56,1) 50%, rgba(249,179,59,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(249,179,59,1)), color-stop(50%, rgba(235,140,56,1)), color-stop(100%, rgba(249,179,59,1)));
+    background: -webkit-linear-gradient(top, rgba(249,179,59,1) 0%, rgba(235,140,56,1) 50%, rgba(249,179,59,1) 100%);
+    background: -o-linear-gradient(top, rgba(249,179,59,1) 0%, rgba(235,140,56,1) 50%, rgba(249,179,59,1) 100%);
+    background: -ms-linear-gradient(top, rgba(249,179,59,1) 0%, rgba(235,140,56,1) 50%, rgba(249,179,59,1) 100%);
+    background: linear-gradient(to bottom, rgba(249,179,59,1) 0%, rgba(235,140,56,1) 50%, rgba(249,179,59,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9b33b', endColorstr='#f9b33b', GradientType=0 );
+}
+
+.slider__item {
+    display: flex;
+    position: relative;
+    padding: 80px 0 70px;
+    &-left, &-right {
+        flex: 1 1 50%;
+    }
+}
+
+.slider__image {
+    display: block;
+}
+
+.icon_burger {
+    width: 46px;
+    height: 44px;
+}
+
+.composition-trigger {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    height: 90px;
+    background-color: #f08c33;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: background-color 0.3s;
+    &:hover {
+        background-color: #e35028;
+    }
+    &__name {
+        font: 14px / 14px 'Gagalin';
+        text-transform: uppercase;
+    }
+    &__dropdown {
+        width: 270px;
+        background-color: rgba(255, 255, 255, .9);
+        border-radius: 5px;
+        overflow: hidden;
+        padding: 16px 18px;
+        position: absolute;
+        top: 0;
+        left: -9999px;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+}
+
+.composition-trigger:hover .composition-trigger__dropdown {
+    left: 90px;
+    opacity: 1;
+}
+
+.consist {
+    width: 100%;
+    color: #2f3234;
+}
+
+.slider__caloricity {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 60px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    color: #f9d4af;
+    &-image {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    &-count {
+        font: 20px 'Gagalin';
+        position: absolute;
+        top: 25px;
+    }
+    &-abbreviation {
+        font: 14px 'Gagalin';
+    }
+}
+
+.iconKkal {
+    display: block;
+    width: 60px;
+    height: 60px;    
+    fill: #f9d4af;
+}
+
+.heading_production {
+    line-height: 64px;
+}
+
+.slider__item-right {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-between;
+}
+
+.slider__price {
+    font-family: 'Gagalin';
+    color: #e35028;
+    margin-right: 30px;
+}
+
+.slider__amount {
+    font-size: 72px;
+}
+
+.slider__value {
+    font-size: 30px;
+}
+
+.slider_order {
+    align-self: flex-end;
+}
+
+.slider__previous, .slider__next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.slider__previous {
+    left: -33px;
+}
+
+.slider__next {
+    right: -33px;
+}
+
+.icon_arrowScrollPrevious, .icon_arrowScrollNext {
+    width: 27px;
+    height: 15px;
+    
+}
+
+.icon_arrowScrollPrevious {
+    transform: rotate(90deg);
+}
+
+.icon_arrowScrollNext {
+    transform: rotate(-90deg);
+}

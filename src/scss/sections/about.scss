@@ -1,0 +1,49 @@
+#about {
+	background-image: url('../../img/bg/about_bg.jpg');
+	color: $color-about;
+}
+
+.about-content {
+	text-align: center;
+}
+
+.about-content__description {
+	display: flex;
+	align-items: baseline;
+}
+
+.column {
+	width: 290px;
+	&:nth-child(n+2) {
+		margin-left: 32px;
+	}
+}
+
+.heading_about {
+	line-height: 64px;
+	margin-bottom: 80px;
+}
+
+.column__picture {
+	margin-bottom: 30px;
+}
+
+.column__heading {
+	font: 24px / 28px 'Lifehack';
+	margin-bottom: 20px;
+}
+
+.iconMeat {
+	width: 97px;
+	height: 89px;
+}
+
+.iconHand {
+	width: 73px;
+	height: 85px;
+}
+
+.iconNatural {
+	width: 88px;
+	height: 75px;
+}

@@ -1,0 +1,15 @@
+@mixin foot_height ($footer-height) {
+	.map-content {
+        min-height: 100%;
+        &::after {
+            content: "";
+		    display: block;
+		    height: $footer-height;
+	    }
+    }
+    
+	.footer {
+		height: $footer-height;
+		margin-top: -$footer-height;
+	}
+}
