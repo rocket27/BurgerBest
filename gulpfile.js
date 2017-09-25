@@ -169,8 +169,17 @@ gulp.task('js', function() {
 });
 
 // --------------------------------------------------------------- //
+// Task: PHP. Перенос PHP в /dist
+// --------------------------------------------------------------- //
+
+gulp.task('php', function () {
+    return gulp.src('src/**/*.php')
+        .pipe(gulp.dest('dist/'));
+});
+
+// --------------------------------------------------------------- //
 // Task: BrowserSync. Запускаем сервер. Предварительно выполнив задачи
-// HTML, FONTS, IMAGES, Vendor CSS, Vendor JS, STYLES, JS. Сервер 
+// HTML, FONTS, IMAGES, Vendor CSS, Vendor JS, STYLES, JS, PHP. Сервер 
 // наблюдает за папкой "./dist".
 // --------------------------------------------------------------- //
 
@@ -183,7 +192,8 @@ gulp.task('browser-sync', [
     'vendor:css',
     'vendor:js',
     'styles',
-    'js'  
+    'js',
+    'php'
 ], function() {
     browserSync.init({
         server: {
@@ -204,6 +214,7 @@ gulp.task('watch', function() {
     gulp.watch(['src/img/**/*.*', '!**/*.svg'], ['images']);
     gulp.watch('src/img/**/*.svg', ['svg']);
     gulp.watch('src/favicon.ico', ['favicon']);
+    gulp.watch('src/**/*.php', ['php']);
 });
 
 // --------------------------------------------------------------- //
@@ -237,7 +248,8 @@ gulp.task('build', function(callback) {
         'vendor:css',
         'vendor:js',
         'styles',
-        'js'
+        'js',
+        'php'
     ], callback);
 });
 
